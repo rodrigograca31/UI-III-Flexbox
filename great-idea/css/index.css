@@ -81,14 +81,15 @@ header img {
 }
 header nav {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	width: 69%;
 }
 header nav a {
 	/* height: 70px; */
 	color: grey;
 	text-decoration: none;
-	width: 110px;
+	/* width: 110px; */
 }
 .intro {
 	margin: 50px 0 75px 0;
@@ -113,6 +114,9 @@ header nav a {
 	width: 170px;
 }
 .image-100 img {
+	width: 100%;
+}
+.middle-img {
 	width: 100%;
 }
 .content-100 {
@@ -214,4 +218,31 @@ button {
 	line-height: 2;
 	list-style-type: square;
 	list-style-position: inside;
+}
+
+@media(max-width: 876px) {
+	.container {
+		width: 100%;
+	}
+	.content-cards .card {
+		width: 100%;
+	}
+	.content-bottom {
+		/* wasnt turning 100% becase defaul is nowrap */
+		flex-wrap: wrap;
+	}
+	.content-bottom > * {
+		width: 100%;
+	}
+	.content-bottom > div:nth-child(2) {
+		order: -1;
+		margin-bottom: 20px;
+	}
+	.services-info-img {
+		width: 100%;
+	}
+	header nav {
+		/* bad! :P */
+		display: none;
+	}
 }
